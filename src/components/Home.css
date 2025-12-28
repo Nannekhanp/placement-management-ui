@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page layout */
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* no page scroll */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #1f2937;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #374151;
+  color: white;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  background-color: #f3f4f6;
+  padding: 20px 40px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+
+/* Login card */
+.login-card {
+  width: 360px;
+  margin: auto; /* ⭐ centers card */
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-card button:hover {
+  background-color: #0056b3;
+}
+
+.login-card p {
+  text-align: center;
+  margin-top: 12px;
+  color: #28a745;
+  cursor: pointer;
+}
+
+.login-card p:hover {
+  text-decoration: underline;
+}
+
+.content h1 {
+  margin-bottom: 0px;   /* reduce space below heading */
+}
+
+.content p {
+  margin-bottom: 0;    /* remove space below paragraph */
+}
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
