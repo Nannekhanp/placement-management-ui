@@ -302,7 +302,7 @@ function StudentRegister() {
               <input
                 type="text"
                 name="degreeUniversity"
-                placeholder="Degree University Name"
+                placeholder="BTECH University Name"
                 value={education.degreeUniversity}
                 onChange={handleEducationChange}
                 required
@@ -310,7 +310,7 @@ function StudentRegister() {
               <input
                 type="text"
                 name="degreeCollege"
-                placeholder="Degree College Name"
+                placeholder="BTECH College Name"
                 value={education.degreeCollege}
                 onChange={handleEducationChange}
                 required
@@ -319,7 +319,7 @@ function StudentRegister() {
                 type="number"
                 step="0.01"
                 name="degreePercentage"
-                placeholder="Degree Percentage / CGPA"
+                placeholder="BTECH Percentage / CGPA"
                 value={education.degreePercentage}
                 onChange={handleEducationChange}
                 required
