@@ -1,6 +1,6 @@
 import { Outlet, Link, useNavigate, useParams  } from "react-router-dom";
 import "./Home.css";
-
+import logo from "../logo.png";
 function Home() {
   const role = localStorage.getItem("role");
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ function Home() {
     <div className="layout">
       {/* Sidebar */}
       <div className="sidebar">
-        <h2 className="logo">PMS</h2>
+         <div className="logo">
+    <img src={logo} alt="PMS Logo" />
+  </div>
 
         {/* BEFORE LOGIN */}
         {!role && (
@@ -42,7 +44,7 @@ function Home() {
         )}
 
         {/* COMPANY SIDEBAR */}
-        {role === "COMPANY" && (
+        {/* {role === "COMPANY" && (
           <>
             <Link to="/company/dashboard">Dashboard</Link>
             <Link to="/company/post-job">Post Job</Link>
@@ -52,14 +54,14 @@ function Home() {
               Logout
             </button>
           </>
-        )}
+        )} */}
 
         {/* ADMIN SIDEBAR */}
         {role === "ADMIN" && (
           <>
             <Link to="/admin/dashboard">Dashboard</Link>
             <Link to="/admin/students">Students</Link>
-            <Link to="/admin/companies">Companies</Link>
+            {/* <Link to="/admin/companies">Companies</Link> */}
             <Link to="/admin/jobs">Jobs</Link>
 
             <button className="logout-btn" onClick={logout}>

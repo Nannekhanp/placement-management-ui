@@ -125,3 +125,13 @@
 .logout-btn:hover {
   background-color: #c82333;
 }
+
+.logo {
+  text-align: center;
+  margin-bottom: 25px; /* pushes menu down */
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
