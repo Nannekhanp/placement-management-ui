@@ -11,6 +11,10 @@ import CompanyRegister from "./components/company/CompanyRegister";
 import CompanyLogin from "./components/company/CompanyLogin";
 import CompanyDashboard from "./components/company/CompanyDashboard";
 import AppliedJobs from "./components/Jobs/AppliedJobs";
+import AdminRegister from "./components/admin/AdminRegister";
+import AdminLogin from "./components/admin/AdminLogin";
+import AdminJobs from "./components/admin/AdminJobs";
+import AdminApplications from "./components/admin/AdminApplications";
 
 function App() {
   return (
@@ -30,12 +34,12 @@ function App() {
           <Route path="student/applied/:studentId" element={<AppliedJobs />} />
           {/* Admin */}
           <Route path="admin/dashboard" element={<AdminDashboard />} />
-
-          {/* Company */}
-          <Route path="/company/register" element={<CompanyRegister />} />
-          <Route path="/company/login" element={<CompanyLogin />} />
-          <Route path="/company/dashboard" element={<CompanyDashboard />} />
-
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/register" element={<AdminRegister />} />
+          {/* <Route path="/jobs" element={<AdminStudents />} /> */}
+          <Route path="/jobs/jobpost" element={<AdminJobs />} />
+          <Route path="/app/applications" element={<AdminApplications />} />
+          
         </Route>
 
         {/* Fallback */}

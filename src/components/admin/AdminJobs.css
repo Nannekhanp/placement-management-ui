@@ -1,0 +1,80 @@
+.admin-jobs-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.job-form-card, .jobs-list-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+/* Grid for two fields per row */
+.job-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.job-form-card input,
+.job-form-card textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.job-form-card textarea {
+  grid-column: span 2;
+  min-height: 80px;
+}
+
+.form-buttons {
+  margin-top: 10px;
+}
+
+.job-form-card button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.job-form-card .cancel-btn {
+  background-color: #6c757d;
+}
+
+.job-item {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.job-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.job-item p {
+  margin: 3px 0;
+}
+
+.job-actions {
+  margin-top: 10px;
+}
+
+.job-actions button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

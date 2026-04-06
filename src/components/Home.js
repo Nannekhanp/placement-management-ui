@@ -1,11 +1,11 @@
-import { Outlet, Link, useNavigate, useParams  } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import logo from "../logo.png";
+
 function Home() {
   const role = localStorage.getItem("role");
+  const userId = localStorage.getItem("id"); // adminId or studentId
   const navigate = useNavigate();
-  const { studentId } = useParams(); // get the id from URL
-  console.log(studentId);
 
   const logout = () => {
     localStorage.clear();
@@ -16,16 +16,15 @@ function Home() {
     <div className="layout">
       {/* Sidebar */}
       <div className="sidebar">
-         <div className="logo">
-    <img src={logo} alt="PMS Logo" />
-  </div>
+        <div className="logo">
+          <img src={logo} alt="PMS Logo" />
+        </div>
 
         {/* BEFORE LOGIN */}
         {!role && (
           <>
             <Link to="/student/login">Student Login</Link>
             <Link to="/student/register">Student Register</Link>
-            <Link to="/company/login">Company Login</Link>
             <Link to="/admin/login">Admin Login</Link>
           </>
         )}
@@ -35,7 +34,7 @@ function Home() {
           <>
             <Link to="/student/dashboard">Dashboard</Link>
             <Link to="/student/jobs">Jobs</Link>
-            <Link to={`/student/applied/${studentId}`}>Applied Jobs</Link>
+            <Link to={`/student/applied/${userId}`}>Applied Jobs</Link>
 
             <button className="logout-btn" onClick={logout}>
               Logout
@@ -43,26 +42,13 @@ function Home() {
           </>
         )}
 
-        {/* COMPANY SIDEBAR */}
-        {/* {role === "COMPANY" && (
-          <>
-            <Link to="/company/dashboard">Dashboard</Link>
-            <Link to="/company/post-job">Post Job</Link>
-            <Link to="/company/applicants">Applicants</Link>
-
-            <button className="logout-btn" onClick={logout}>
-              Logout
-            </button>
-          </>
-        )} */}
-
         {/* ADMIN SIDEBAR */}
         {role === "ADMIN" && (
           <>
             <Link to="/admin/dashboard">Dashboard</Link>
-            <Link to="/admin/students">Students</Link>
-            {/* <Link to="/admin/companies">Companies</Link> */}
-            <Link to="/admin/jobs">Jobs</Link>
+            {/* <Link to="/jobs">Students</Link> */}
+            <Link to="/jobs/jobpost">Post Jobs</Link>
+            <Link to="/app/applications">Applications</Link>
 
             <button className="logout-btn" onClick={logout}>
               Logout
@@ -71,7 +57,7 @@ function Home() {
         )}
       </div>
 
-      {/* Content Area (ONLY Outlet) */}
+      {/* Content Area */}
       <div className="content">
         <div className="content-body">
           <Outlet />

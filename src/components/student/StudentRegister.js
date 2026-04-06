@@ -173,7 +173,6 @@ function StudentRegister() {
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
-                {/* <option value="Other">Other</option> */}
               </select>
               <input
                 type="date"
@@ -209,8 +208,8 @@ function StudentRegister() {
                 name="state"
                 value={personal.state}
                 onChange={(e) => {
-                  handlePersonalChange(e);
-                  setPersonal({ ...personal, district: "" }); // reset district
+                  const value = e.target.value;
+                  setPersonal({ ...personal, state: value, district: "" });
                 }}
                 required
               >
